@@ -45,6 +45,7 @@ export default class NewsItem extends Component {
             }
             className="card-img-top"
             alt="..."
+            style={{ height: '200px' }}
           ></img>
           <div className="card-body">
             <span
@@ -56,7 +57,7 @@ export default class NewsItem extends Component {
             <h5 className="card-title">{title}...</h5>
             <p className="card-text">{discription}...</p>
             <p className="card-text">
-              <small className="text-body-secondary"> 
+              <small className="text-body-secondary">
                 By {author ? author : "Unknown"} on
                 {new Date(date).toGMTString()}
               </small>

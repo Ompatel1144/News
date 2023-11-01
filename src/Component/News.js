@@ -144,29 +144,29 @@ export default class News extends Component {
           loader={<Spinner />}
           style={{ overflowX: "hidden" }}
         >
-            <div className="hlo">
-              {/* this is uncomment when u need spinner */}
-              {/* !this.state.loading && */}
-              {this.state.articles.map((element) => {
-                return (
-                  <div key={element.url}>
-                    <NewsItem
-                      title={element.title ? element.title.slice(0, 20) : ""}
-                      discription={
-                        element.description
-                          ? element.description.slice(0, 80)
-                          : ""
-                      }
-                      image={element.urlToImage}
-                      url={element.url}
-                      author={element.author}
-                      date={element.publishedAt}
-                      source={element.source.name}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+          <div className="hlo">
+            {/* this is uncomment when u need spinner */}
+            {/* !this.state.loading && */}
+            {this.state.articles.map((element) => {
+              return (
+                <div key={element.url}>
+                  <NewsItem
+                    title={element.title ? element.title.slice(0, 20) : ""}
+                    discription={
+                      element.description
+                        ? element.description.slice(0, 50)
+                        : ""
+                    }
+                    image={element.urlToImage}
+                    url={element.url}
+                    author={element.author}
+                    date={element.publishedAt}
+                    source={element.source.name}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </InfiniteScroll>
         {/* <div
           className="container"
