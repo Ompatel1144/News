@@ -52,7 +52,6 @@ export default class Navbar extends Component {
                 <li className={`nav-item ${this.state.activeItem === 'technology' ? 'active' : ''}`} onClick={() => this.handleItemClick('technology')}>
                   <Link className={`nav-link ${this.state.activeItem === 'technology' ? 'text-danger' : 'text-white'}`} to="/technology">Technology</Link></li>
               </ul>
-              {/* Your other code */}
             </div>
           </div>
         </nav>
@@ -60,6 +59,8 @@ export default class Navbar extends Component {
     );
   }
 }
+
+// Same code to upper
 // import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 
